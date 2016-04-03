@@ -33,16 +33,10 @@
                                     <constraint firstAttribute="height" constant="120" id="fvk-70-U9v"/>
                                 </constraints>
                                 <state key="normal" image="playbtn"/>
+                                <connections>
+                                    <action selector="onPlayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WJ3-cR-GMT"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emt-yD-nLf" userLabel="TapTxt">
-                                <rect key="frame" x="180" y="351" width="240" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Urt-Me-JdH"/>
-                                    <constraint firstAttribute="width" constant="240" id="jwP-rT-tWg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6X-WM-FxQ" userLabel="CoinBtn">
                                 <rect key="frame" x="215" y="28" width="170" height="180"/>
                                 <constraints>
@@ -50,6 +44,9 @@
                                     <constraint firstAttribute="width" constant="170" id="zKc-vt-29E"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="coin"/>
+                                <connections>
+                                    <action selector="onCoinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sJl-q5-L3L"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z46-2S-DD6" userLabel="TapeLbl">
                                 <rect key="frame" x="177" y="230" width="246" height="72"/>
@@ -61,6 +58,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emt-yD-nLf" userLabel="TapTxt">
+                                <rect key="frame" x="180" y="351" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Urt-Me-JdH"/>
+                                    <constraint firstAttribute="width" constant="240" id="jwP-rT-tWg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -80,6 +86,13 @@
                             <constraint firstItem="Z46-2S-DD6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x9d-Ce-KXT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="howManyTapsTxt" destination="emt-yD-nLf" id="r2R-OO-KTA"/>
+                        <outlet property="logoImg" destination="KSY-1Y-INh" id="iwD-9P-xGU"/>
+                        <outlet property="playBtn" destination="Gp6-84-MDv" id="vHD-Tr-gSq"/>
+                        <outlet property="tapBtn" destination="c6X-WM-FxQ" id="6XR-9X-LOg"/>
+                        <outlet property="tapsLbl" destination="Z46-2S-DD6" id="q22-OP-zD9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
